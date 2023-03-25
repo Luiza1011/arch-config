@@ -40,6 +40,10 @@ cd nwg-dock-bin
 makepkg -si --noconfirm
 cd ..
 
+git clone https://aur.archlinux.org/spotify.git
+cd spotify
+makepkg -si --noconfirm
+cd ..
 
 git clone https://aur.archlinux.org/spotifyd.git
 cd spotifyd
@@ -58,11 +62,6 @@ cd ..
 
 git clone https://aur.archlinux.org/swaylock-effects.git
 cd swaylock-effects
-makepkg -si --noconfirm
-cd ..
-
-git clone https://aur.archlinux.org/spotify-tui.git
-cd spotify-tui
 makepkg -si --noconfirm
 cd ..
 
@@ -89,9 +88,9 @@ rm -rf azote/
 rm -rf hyprshot/
 rm -rf nwg-look-bin/
 rm -rf nwg-dock-bin/
-rm -rf spotify/
 rm -rf pacmixer/
 rm -rf swaylock-effects/
+rm -rf spotify/
 rm -rf spotifyd
 rm -rf spotify-tui/
 rm -rf heroic-games-launcher-bin/
