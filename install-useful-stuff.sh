@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+cd
 sudo pacman -Sl multilib
 
 sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer swaybg playerctl v4l2loopback-dkms ffmpeg android-udev rofi waybar nemo font-manager pavucontrol kitty cmus mc helvium steam wine spotifyd npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr --noconfirm
