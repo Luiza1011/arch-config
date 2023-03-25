@@ -88,9 +88,11 @@ rm -rf wlr-randr/
 rm -rf azote/
 rm -rf hyprshot/
 rm -rf nwg-look-bin/
+rm -rf nwg-dock-bin/
 rm -rf spotify/
 rm -rf pacmixer/
 rm -rf swaylock-effects/
+rm -rf spotifyd
 rm -rf spotify-tui/
 rm -rf heroic-games-launcher-bin/
 rm -rf pfetch-rs-bin/
@@ -102,15 +104,20 @@ cd ohmyzsh/tools/
 sh install.sh
 cd
 
-rm -rf ~/.config/kitty/
-ln -r -s ~/arch-config/symlinks/kitty/ ~/.config/
-rm -rf ~/.config/sway/
-ln -r -s ~/arch-config/symlinks/sway/ ~/.config/
-rm -rf ~/.config/swaync/
-ln -r -s ~/arch-config/symlinks/swaync/ ~/.config/
-rm -rf ~/.config/waybar/
-ln -r -s ~/arch-config/symlinks/waybar/ ~/.config/
+rm -rf ~/.config/kitty
+rm -rf ~/.config/sway
+rm -rf ~/.config/swaync
+rm -rf ~/.config/waybar
 rm -rf ~/.zshrc
-ln -r -s ~/arch-config/symlinks/.zshrc ~/
+
+ln -s ~/arch-config/kitty ~/.config/
+
+ln -s ~/arch-config/sway ~/.config/
+
+ln -s ~/arch-config/swaync ~/.config/
+
+ln -s ~/arch-config/waybar ~/.config/
+
+ln -s ~/arch-config/.zshrc ~/
 
 wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
