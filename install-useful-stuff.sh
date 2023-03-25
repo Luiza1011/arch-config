@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 sudo pacman -Sl multilib
 
-sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer swaybg playerctl v4l2loopback-dkms ffmpeg android-udev rofi waybar nemo font-manager pavucontrol kitty cmus mc helvium steam wine spotifyd npm nodejs cava pfetch xdg-desktop-portal xdg-desktop-portal-wlr nwg-look nwg-dock --noconfirm
+sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer swaybg playerctl v4l2loopback-dkms ffmpeg android-udev rofi waybar nemo font-manager pavucontrol kitty cmus mc helvium steam wine spotifyd npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr --noconfirm
 
 
 git clone https://aur.archlinux.org/swayfx-git.git
@@ -105,3 +105,5 @@ rm -rf ~/.config/waybar/
 cp ~/arch-config/symlinks/waybar/ ~/.config/
 rm -rf ~/.zshrc
 cp ~/arch-config/symlinks/.zshrc ~/
+
+wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
