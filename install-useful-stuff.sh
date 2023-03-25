@@ -100,7 +100,7 @@ rm -rf ohmyzsh/
 git clone https://github.com/ohmyzsh/ohmyzsh.git
 cd ohmyzsh/tools/
 sh install.sh
-cd ..
+cd
 
 rm -rf ~/.config/kitty/
 ln -r -s ~/arch-config/symlinks/kitty/ ~/.config/
