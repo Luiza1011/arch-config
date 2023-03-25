@@ -103,14 +103,14 @@ sh install.sh
 cd ..
 
 rm -rf ~/.config/kitty/
-cp ~/arch-config/symlinks/kitty/ ~/.config/
+ln -r -s ~/arch-config/symlinks/kitty/ ~/.config/
 rm -rf ~/.config/sway/
-cp ~/arch-config/symlinks/sway/ ~/.config/
+ln -r -s ~/arch-config/symlinks/sway/ ~/.config/
 rm -rf ~/.config/swaync/
-cp ~/arch-config/symlinks/swaync/ ~/.config/
+ln -r -s ~/arch-config/symlinks/swaync/ ~/.config/
 rm -rf ~/.config/waybar/
-cp ~/arch-config/symlinks/waybar/ ~/.config/
+ln -r -s ~/arch-config/symlinks/waybar/ ~/.config/
 rm -rf ~/.zshrc
-cp ~/arch-config/symlinks/.zshrc ~/
+ln -r -s ~/arch-config/symlinks/.zshrc ~/
 
 wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
