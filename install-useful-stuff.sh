@@ -2,7 +2,7 @@
 cd
 sudo pacman -Sl multilib
 
-sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer swaybg playerctl v4l2loopback-dkms ffmpeg android-udev rofi waybar nemo font-manager pavucontrol kitty cmus mc helvium steam wine spotifyd npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr --noconfirm
+sudo pacman -S pacman-contrib polkit-gnome base-devel firefox pamixer playerctl swaybg playerctl v4l2loopback-dkms ffmpeg android-udev rofi waybar nemo font-manager pavucontrol kitty cmus mc steam wine spotifyd npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr --noconfirm
 
 
 git clone https://aur.archlinux.org/swayfx-git.git
@@ -34,6 +34,12 @@ git clone https://aur.archlinux.org/nwg-look-bin.git
 cd nwg-look-bin
 makepkg -si --noconfirm
 cd ..
+
+git clone https://aur.archlinux.org/nwg-dock-bin.git
+cd nwg-dock-bin
+makepkg -si --noconfirm
+cd ..
+
 
 git clone https://aur.archlinux.org/spotifyd.git
 cd spotifyd
