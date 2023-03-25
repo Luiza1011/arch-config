@@ -8,77 +8,82 @@ sudo pacman -S pacman-contrib polkit-gnome base-devel firefox pamixer playerctl 
 git clone https://aur.archlinux.org/swayfx-git.git
 cd swayfx-git
 makepkg -si --noconfirm 
-cd ..
+cd
 
 git clone https://aur.archlinux.org/whatsdesk-bin.git
 cd whatsdesk-bin
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/wlr-randr.git
 cd wlr-randr
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/azote.git
 cd azote
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/hyprshot.git
 cd hyprshot
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/nwg-look-bin.git
 cd nwg-look-bin
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/nwg-dock-bin.git
 cd nwg-dock-bin
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/spotify.git
 cd spotify
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/spotifyd.git
 cd spotifyd
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/spotify-tui.git
 cd spotify-tui
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/pacmixer.git
 cd pacmixer
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/swaylock-effects.git
 cd swaylock-effects
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/heroic-games-launcher-bin.git
 cd heroic-games-launcher-bin
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/pfetch-rs-bin.git
 cd pfetch-rs-bin
 makepkg -si --noconfirm
-cd ..
+cd
 
 git clone https://aur.archlinux.org/discordo-git.git
 cd discordo-git 
 makepkg -si --noconfirm
-cd ..
+cd
+
+git clone https://aur.archlinux.org/steamtinkerlaunch.git
+cd steamtinkerlauncher
+makepkg -si --noconfirm
+cd
 
 rm -rf swayfx-git/
 rm -rf yay-bin/
