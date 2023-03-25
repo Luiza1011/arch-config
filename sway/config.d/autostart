@@ -1,0 +1,28 @@
+include $HOME/.config/sway/config.d/keybinds/keywords
+
+# Auth with polkit-gnome:
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
+# Desktop notifications
+exec swaync
+
+# Network Applet
+exec nm-applet --indicator
+
+# GTK3 applications take a long time to start
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+     
+# Welcome App
+#exec dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
+
+exec autotiling 
+
+exec discord
+
+exec spotifyd -u <username/email> -p <password> -v softvol --device-type speaker -d Lu-speaker -b pulseaudio -B 320 --dbus-type session
+
+# Sway Fader
+# exec python3 ~/.config/sway/scripts/swayfader.py      

@@ -1,0 +1,21 @@
+include $HOME/.config/sway/config.d/keybinds/keywords
+
+    bindsym $super+Shift+f12 reload
+    bindsym $super+q kill
+
+    bindsym $super+m exec waybar
+    bindsym $super+Shift+m exec killall waybar
+    bindsym $super+f12 exec $powermenu
+
+
+    bindsym $super+z exec $drun
+    bindsym $super+d exec $run
+    bindsym $alt+Tab exec $windows
+    bindsym print exec $screenshot
+
+
+#
+# Backlight
+#
+    bindsym $alt+XF86AudioNext exec brightnessctl -c backlight set +5%
+    bindsym $alt+XF86AudioPrev exec brightnessctl -c backlight set 5%-

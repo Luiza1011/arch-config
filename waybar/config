@@ -1,0 +1,19 @@
+[
+{
+"mode": "dock",
+"name": "top-bar",
+"layer": "top",
+"position": "top",
+"spacing": 0,
+"fixed-center": true,
+"margin-left": 230,
+"margin-right": 230,
+
+	"modules-left": ["clock","custom/separator","sway/workspaces",],
+	"modules-center": ["custom/media",],
+	"modules-right": ["tray","custom/separator","custom/updater","custom/separator",
+	"custom/notification","custom/separator","pulseaudio","custom/separator","custom/power"],
+
+"include": "~/.config/waybar/Module.json",
+},
+]

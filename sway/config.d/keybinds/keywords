@@ -1,0 +1,34 @@
+# Logo key. Use Mod1 for Alt.
+set $super Mod4
+set $alt Mod1
+
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# audio control
+set $sink_volume pactl get-sink-volume @DEFAULT_SINK@ | grep '^Volume:' | cut -d / -f 2 | tr -d ' ' | sed 's/%//'
+set $source_volume pactl get-source-volume @DEFAULT_SOURCE@ | grep '^Volume:' | cut -d / -f 2 | tr -d ' ' | sed 's/%//'
+set $volume_down $(pactl set-sink-volume @DEFAULT_SINK@ -5% && $sink_volume)
+set $volume_up $(pactl set-sink-volume @DEFAULT_SINK@ +5% && $sink_volume)
+set $volume_mute $(pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl get-sink-mute @DEFAULT_SINK@ | sed -En "/no/ s/.*/$($sink_volume)/p; /yes/ s/.*/0/p")
+set $mic_mute $(pactl set-source-mute @DEFAULT_SOURCE@ toggle && pactl get-source-mute @DEFAULT_SOURCE@ | sed -En "/no/ s/.*/$($source_volume)/p; /yes/ s/.*/0/p")
+
+set $term kitty
+
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu wofi -c ~/.config/wofi/config -I
+
+set $powermenu ~/.config/waybar/scripts/power-menu.sh
+
+set $drun       ~/.config/sway/scripts/Rofi/Scripts/launcher
+set $mpd        ~/.config/sway/scripts/Rofi/Scripts/mpd
+set $playerctl  ~/.config/sway/scripts/Rofi/Scripts/playerctl
+set $powermenu  ~/.config/sway/scripts/Rofi/Scripts/powermenu
+set $run        ~/.config/sway/scripts/Rofi/Scripts/runner
+set $windows    ~/.config/sway/scripts/Rofi/Scripts/windows
+set $screenshot ~/.config/sway/scripts/Rofi/Scripts/screenshot

@@ -1,0 +1,133 @@
+@define-color light-blue #AFD4Df;
+@define-color gunmetal #19242C;
+@define-color gunmetal-2 #1A2834;
+@define-color gunmetal-3 #273844;
+@define-color dark-slate-gray #3D565E;
+@define-color gunmetal-4 #25353D;
+@define-color light-blue-2 #95C7CD;
+@define-color moonstone #619CA0;
+@define-color gunmetal-5 #202E38;
+@define-color night #101417;
+
+*{border-radius: 100px; font-family: Ubuntu, Symbols Nerd Font mono; min-height: 15px;}
+
+window#waybar.top-bar {
+    background: linear-gradient(to right, rgba(6, 23, 46, 0.377),rgba(16, 20, 23, 0.418));
+    border: 1px solid;
+    border-color: rgba(175,212,223,0.1);
+    font-size: 16px;}
+window#waybar.bottom-bar {background: linear-gradient(to right, rgba(6, 23, 46, 0.2),rgba(16,20,23,0.2));}
+
+
+/*CUSTOM WAYBAR PLUGINS*/
+#custom-power{
+   
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-azote{
+ 
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-updater{    
+
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-media{
+
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    font-size: 14px;
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-droidcam{  
+
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#custom-notification {
+    font-family: "NotoSansMono Nerd Font";
+}
+
+
+/*DEFAULT WAYBAR PLUGINS*/
+#tray{
+
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#taskbar{}
+
+#window{    
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#battery{    
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#clock{    
+    font-size: 15px;
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#pulseaudio{
+    /*border: 1px solid;
+    border-color: @light-blue;*/
+    margin: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+
+
+/*WORKSPACES PLUGINS*/
+#workspaces{
+    font-size: 11.5px;
+    color: grey;}
+
+#workspaces button{
+    font-size: 11.5px;
+    color: grey;}
+
+#workspaces button.visible{
+    font-size: 15px;
+    color: white}

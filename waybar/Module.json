@@ -1,0 +1,177 @@
+//========================== DEFAULT MODULES ========================//
+{
+
+"custom/separator":{
+  "format":"|",
+    },
+
+"custom/power":{
+    "format": " ",
+    "on-click": "~/.config/sway/scripts/Rofi/Scripts/powermenu",
+    },
+  
+  "custom/azote": {
+    "format":"󰏜",
+    "on-click": "azote"
+  
+    },
+  
+ "custom/droidcam":{
+    "format":"",
+    "on-click": "/home/luiza/Lu-dots/Extra/scripts/Droidcamshit",
+    },
+  
+  "custom/updater":{
+    "format": " {}",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) ]]",
+    "interval": 5,
+    "on-click": "kitty -e ame --noconfirm && notify-send 'The system has been updated'"
+    },
+  
+  "custom/media": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "format-icons": {
+        "Playing": " ",
+        "Paused": " ",
+    },
+    "max-length":70,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause",
+    },
+
+  "custom/media": {
+    "format": "{icon}{}",
+    "return-type": "json",
+    "format-icons": {
+        "Playing": " ",
+        "Paused": " ",
+    },
+    "max-length":70,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\"}' -F",
+    "on-click": "playerctl play-pause",
+    },
+  
+  "custom/notification": {
+     "tooltip": false,
+     "format": " {icon} ",
+     "format-icons": {
+          "notification": "<span foreground='red'><sup></sup></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-none": "",
+          "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "inhibited-none": "",
+          "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+          "dnd-inhibited-none": ""
+     },
+     "return-type": "json",
+     "exec-if": "which swaync-client",
+     "exec": "swaync-client -swb",
+     "on-click": "swaync-client -t -sw",
+     "on-click-right": "swaync-client -d -sw",
+     "escape": true
+ },
+
+//========================== DEFAULT MODULES ========================//
+"sway/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": "",
+    "6": "",
+    "7": "",
+    "8": "",
+    "9": "",
+    "10":"藍",
+    "focused": "",
+    "urgent": "",
+    "default": "",
+  },
+  "sort-by-number": true,
+  "smooth-scrolling-threshold": 2,
+  "persistent_workspaces": {
+    "10":[],
+  }
+    },
+
+"tray":{
+	"icon-size":18,
+	"spacing": 10
+    },
+
+"wlr/taskbar":{
+    "icon-size": 16,
+    "on-click": "activate",
+    "on-click-right": "minimize",
+    "on-click-middle": "close",
+    },
+
+"sway/window": {
+    "format": "  {} ",
+    "separate-outputs": true,
+    },
+
+"battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+"clock": {
+        "timezone": "UTC",
+        "format": "{:%I:%M %p}",
+        "on-click": "~/.config/sway/scripts/Rofi/Scripts/launcher",
+    },
+
+"tray":{
+        "icon-size":19,
+        "spacing": 4
+    },
+
+"pulseaudio":{
+  "format": " {icon} {volume}% ",
+  "format-bluetooth": "{volume}% {icon}",
+  "format-muted": " 0%",
+  "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+  },
+  "scroll-step": 1,
+  "on-click": "pamixer -t",
+  "on-click-right": "pavucontrol",
+  "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+"mpris": {
+	"format": "DEFAULT: {player_icon} {dynamic}",
+	"format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+	"player-icons": {
+		"default": "▶",
+		"mpv": "",
+    "spotify": "阮",
+
+	},
+	"status-icons": {
+		"paused": "⏸"
+	},
+	// "ignored-players": ["firefox"]
+    },
+}

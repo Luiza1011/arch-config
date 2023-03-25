@@ -1,0 +1,11 @@
+include $HOME/.config/sway/config.d/keybinds/keywords
+
+#programs
+
+bindsym $super+f  exec nautilus
+bindsym $super+w  exec firefox
+bindsym $super+f1 exec discord
+bindsym $super+f2 exec whatsdesk
+bindsym $super+g  exec gimp
+bindsym $super+Return exec $term
+bindsym $super+e  exec code

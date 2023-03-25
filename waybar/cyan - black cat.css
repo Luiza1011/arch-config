@@ -1,0 +1,70 @@
+/* CSS HEX */
+@definecolor light-blue #AFD4DAff;
+@definecolor gunmetal #19242Cff;
+@definecolor gunmetal-2 #1A2834ff;
+@definecolor gunmetal-3 #273844ff;
+@definecolor dark-slate-gray #3D565Eff;
+@definecolor gunmetal-4 #25353Dff;
+@definecolor light-blue-2 #95C7CDff;
+@definecolor moonstone #619CA0ff;
+@definecolor gunmetal-5 #202E38ff;
+@definecolor night #101417ff;
+
+/* CSS HSL */
+@definecolor light-blue hsla(188, 37%, 77%, 1);
+@definecolor gunmetal hsla(205, 28%, 14%, 1);
+@definecolor gunmetal-2 hsla(208, 33%, 15%, 1);
+@definecolor gunmetal-3 hsla(205, 27%, 21%, 1);
+@definecolor dark-slate-gray hsla(195, 21%, 30%, 1);
+@definecolor gunmetal-4 hsla(200, 24%, 19%, 1);
+@definecolor light-blue-2 hsla(186, 36%, 69%, 1);
+@definecolor moonstone hsla(184, 25%, 50%, 1);
+@definecolor gunmetal-5 hsla(205, 27%, 17%, 1);
+@definecolor night hsla(206, 18%, 8%, 1);
+
+/* SCSS HEX */
+$light-blue #AFD4DAff;
+$gunmetal #19242Cff;
+$gunmetal-2 #1A2834ff;
+$gunmetal-3 #273844ff;
+$dark-slate-gray #3D565Eff;
+$gunmetal-4 #25353Dff;
+$light-blue-2 #95C7CDff;
+$moonstone #619CA0ff;
+$gunmetal-5 #202E38ff;
+$night #101417ff;
+
+/* SCSS HSL */
+$light-blue hsla(188, 37%, 77%, 1);
+$gunmetal hsla(205, 28%, 14%, 1);
+$gunmetal-2 hsla(208, 33%, 15%, 1);
+$gunmetal-3 hsla(205, 27%, 21%, 1);
+$dark-slate-gray hsla(195, 21%, 30%, 1);
+$gunmetal-4 hsla(200, 24%, 19%, 1);
+$light-blue-2 hsla(186, 36%, 69%, 1);
+$moonstone hsla(184, 25%, 50%, 1);
+$gunmetal-5 hsla(205, 27%, 17%, 1);
+$night hsla(206, 18%, 8%, 1);
+
+/* SCSS RGB */
+$light-blue rgba(175, 212, 218, 1);
+$gunmetal rgba(25, 36, 44, 1);
+$gunmetal-2 rgba(26, 40, 52, 1);
+$gunmetal-3 rgba(39, 56, 68, 1);
+$dark-slate-gray rgba(61, 86, 94, 1);
+$gunmetal-4 rgba(37, 53, 61, 1);
+$light-blue-2 rgba(149, 199, 205, 1);
+$moonstone rgba(97, 156, 160, 1);
+$gunmetal-5 rgba(32, 46, 56, 1);
+$night rgba(16, 20, 23, 1);
+
+/* SCSS Gradient */
+$gradient-top linear-gradient(0deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-right linear-gradient(90deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-bottom linear-gradient(180deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-left linear-gradient(270deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-top-right linear-gradient(45deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-bottom-right linear-gradient(135deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-top-left linear-gradient(225deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-bottom-left linear-gradient(315deg, #AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
+$gradient-radial radial-gradient(#AFD4DAff, #19242Cff, #1A2834ff, #273844ff, #3D565Eff, #25353Dff, #95C7CDff, #619CA0ff, #202E38ff, #101417ff);
