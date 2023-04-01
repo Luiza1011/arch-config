@@ -26,7 +26,7 @@
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
     "interval": 5,
-    "on-click": "kitty -e ame --noconfirm && notify-send 'The system has been updated'"
+    "on-click": "kitty -e yay --noconfirm && flatpak update -y && notify-send 'The system has been updated'"
     },
   
   "custom/media": {
