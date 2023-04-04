@@ -1,8 +1,9 @@
 include $HOME/.config/sway/config.d/keybinds/keywords
 
-#blur on
-#blur_passes 3
-#blur_radius 5
+blur on
+blur_xray on
+blur_passes 2
+blur_radius 3
 
 corner_radius 7
 
@@ -10,4 +11,4 @@ shadows on
 shadow_blur_radius 20
 shadow_color #000000dd
 
-default_dim_inactive 0.4
+default_dim_inactive 0.1

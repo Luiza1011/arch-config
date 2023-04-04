@@ -20,9 +20,13 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 
 exec autotiling 
 
+exec sh ~/crownstart.sh
+
 exec discord
 
-exec spotifyd -u <username/email> -p <password> -v softvol --device-type speaker -d Lu-speaker -b pulseaudio -B 320 --dbus-type session
+exec steam -nochatui -nofriendsui -silent
+
+exec nwg-dock -d -w 10 -c ~/.config/sway/scripts/Rofi/Scripts/launcher
 
 # Sway Fader
 # exec python3 ~/.config/sway/scripts/swayfader.py      

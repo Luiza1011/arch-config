@@ -1,0 +1,71 @@
+#!/usr/bin/env bash
+
+# Import Current Theme
+DIR="$HOME/.config/sway/scripts/Rofi"
+STYLE="default"
+RASI="$DIR/Rasi/launcher.rasi"
+
+# Theme Elements
+prompt='Screenshot'
+mesg="Directory :: `xdg-user-dir PICTURES`/Screenshots"
+
+# Options
+layout=`cat ${RASI} | grep 'USE_ICON' | cut -d'=' -f2`
+if [[ "$layout" == 'NO' ]]; then
+	option_1="placeholder"
+	option_2="placeholder"
+	option_3="placeholder"
+	option_4="placeholder"
+	option_5="placeholder"
+	option_6="placeholder"
+	else
+	option_1=" Keywords List"
+	option_2=" Media Settings"
+	option_3=" Programs Keybidns"
+	option_4=" Utilities"
+fi
+
+# Rofi CMD
+rofi_cmd() {
+	rofi -dmenu \
+		-p "$prompt" \
+		-mesg "$mesg" \
+		-markup-rows \
+		-theme ${RASI}
+}
+
+run_rofi() {
+	echo -e "$option_1\n$option_2\n$option_3\n$option_4" | rofi_cmd
+}
+
+# Execute Command
+run_cmd() {
+	if [[ "$1" == '--opt1' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/keybinds/keywords
+	elif [[ "$1" == '--opt2' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/keybinds/media
+	elif [[ "$1" == '--opt3' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/keybinds/programs
+	elif [[ "$1" == '--opt4' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/keybinds/utilities
+	fi
+}
+
+
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+    $option_1)
+		run_cmd --opt1
+        ;;
+    $option_2)
+		run_cmd --opt2
+        ;;
+    $option_3)
+		run_cmd --opt3
+        ;;
+    $option_4)
+		run_cmd --opt4
+        ;;
+
+esac

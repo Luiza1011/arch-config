@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+# Import Current Theme
+DIR="$HOME/.config/sway/scripts/Rofi"
+STYLE="default"
+RASI="$DIR/Rasi/runner.rasi"
+
+# Theme Elements
+prompt='Useful Commands'
+mesg="Crown and Joycond switches"
+
+# Options
+layout=`cat ${RASI} | grep 'USE_ICON' | cut -d'=' -f2`
+if [[ "$layout" == 'NO' ]]; then
+	option_1="placeholder"
+	option_2="placeholder"
+	option_3="placeholder"
+	option_4="placeholder"
+	option_5="placeholder"
+	option_6="placeholder"
+	else
+	option_1="  Crown bot Start"
+	option_2="⏼  killall screen"
+	option_3="  Start joycond"
+	option_4="⏼  Stop joycond"
+	option_5="  Settings"
+fi
+
+# Rofi CMD
+rofi_cmd() {
+	rofi -dmenu \
+		-p "$prompt" \
+		-mesg "$mesg" \
+		-markup-rows \
+		-theme ${RASI}
+}
+
+run_rofi() {
+	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5" | rofi_cmd
+}
+
+# Execute Command
+run_cmd() {
+	if [[ "$1" == '--opt1' ]]; then
+		sh ~/crownstart.sh
+	elif [[ "$1" == '--opt2' ]]; then
+		killall screen
+	elif [[ "$1" == '--opt3' ]]; then
+		kitty -e sudo systemctl start joycond.service
+	elif [[ "$1" == '--opt4' ]]; then
+		kitty -e sudo systemctl stop joycond.service
+	elif [[ "$1" == '--opt5' ]]; then
+		sh /home/luiza/.config/sway/scripts/Rofi/Scripts/Settings/sway-settings
+	fi
+}
+y
+
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+    $option_1)
+		run_cmd --opt1
+        ;;
+    $option_2)
+		run_cmd --opt2
+        ;;
+    $option_3)
+		run_cmd --opt3
+        ;;
+    $option_4)
+		run_cmd --opt4
+        ;;
+    $option_5)
+		run_cmd --opt5
+        ;;
+
+esac

@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 ### ALIASES ###
 #alias aster='~/go/bin/Aster'
 
+#misc
+alias discord="/opt/Discord/Discord"
+
 #list
 alias ls='ls --color=auto'
 alias la='ls -a'
@@ -117,11 +120,11 @@ alias cd..='cd ..'
 alias ..='cd ..'
 
 
-#alias update='ame --noconfirm flatpak update'
+#alias update='yay --noconfirm & flatpak update'
 
-alias aur='ame --noconfirm'
+alias ame='ame install --noconfirm'
 
-alias install='ame --noconfirm'
+alias yay='yay --noconfirm'
 
 alias remove='sudo pacman -Rcns'
 
@@ -202,5 +205,10 @@ alias rmgitcache="rm -r ~/.cache/git"
 alias grh="git reset --hard"
 
 pfetch
+
+export PATH="~/.local/bin/:$PATH"
+
+export MOZ_ENABLE_WAYLAND=1 firefox
+
 
 export RUST_BACKTRACE=1

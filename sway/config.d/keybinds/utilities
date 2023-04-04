@@ -13,7 +13,7 @@ include $HOME/.config/sway/config.d/keybinds/keywords
     bindsym $alt+Tab exec $windows
     bindsym print exec $screenshot
 
-
+bindsym $super+u exec sh ~/.config/sway/scripts/Rofi/Scripts/Utils
 #
 # Backlight
 #

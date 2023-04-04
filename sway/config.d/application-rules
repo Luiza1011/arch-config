@@ -8,5 +8,9 @@ for_window [window_role="About"] floating enable
 for_window [app_id="pavucontrol" ] floating enable, resize set width 80 ppt height 70 ppt
 for_window [title="Picture-in-Picture"] floating enable, sticky enable
 
+
+assign [class="discord"] 1
+assign [class="whatsdesk"] 2
+assign [class="VSCodium"] 3
 assign [class="Spotify"] 9
 assign [app_id="kitty"] 10

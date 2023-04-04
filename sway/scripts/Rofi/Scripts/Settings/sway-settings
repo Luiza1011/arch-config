@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+# Import Current Theme
+DIR="$HOME/.config/sway/scripts/Rofi"
+STYLE="default"
+RASI="$DIR/Rasi/launcher.rasi"
+
+# Theme Elements
+prompt='Screenshot'
+mesg="Sway Settings"
+
+# Options
+layout=`cat ${RASI} | grep 'USE_ICON' | cut -d'=' -f2`
+if [[ "$layout" == 'NO' ]]; then
+	option_1="placeholder"
+	option_2="placeholder"
+	option_3="placeholder"
+	option_4="placeholder"
+	option_5="placeholder"
+	option_6="placeholder"
+	else
+	option_1=" Keybinds Category              "
+	option_2=" Wm-Keybinds Category      "
+	option_3=" Application Rules"
+	option_4=" Autostart Configuration"
+	option_5=" Input"
+	option_6=" Output"
+	option_7=" Swayfx Options"
+	option_8=" Theme"
+fi
+
+# Rofi CMD
+rofi_cmd() {
+	rofi -dmenu \
+		-p "$prompt" \
+		-mesg "$mesg" \
+		-markup-rows \
+		-theme ${RASI}
+}
+
+run_rofi() {
+	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6\n$option_7\n$option_8" | rofi_cmd
+}
+
+# Execute Command
+run_cmd() {
+	if [[ "$1" == '--opt1' ]]; then
+		sh /home/luiza/.config/sway/scripts/Rofi/Scripts/Settings/keybinds
+	elif [[ "$1" == '--opt2' ]]; then
+		sh /home/luiza/.config/sway/scripts/Rofi/Scripts/Settings/wm-keybinds
+	elif [[ "$1" == '--opt3' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/application-rules
+	elif [[ "$1" == '--opt4' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/autostart
+	elif [[ "$1" == '--opt5' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/input
+	elif [[ "$1" == '--opt6' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/output
+	elif [[ "$1" == '--opt7' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/swayfx_theme
+	elif [[ "$1" == '--opt8' ]]; then
+		kitty -e nvim ~/.config/sway/config.d/theme
+	fi
+}
+
+
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+    $option_1)
+		run_cmd --opt1
+        ;;
+    $option_2)
+		run_cmd --opt2
+        ;;
+    $option_3)
+		run_cmd --opt3
+        ;;
+    $option_4)
+		run_cmd --opt4
+        ;;
+    $option_5)
+		run_cmd --opt5
+        ;;
+	$option_6)
+		run_cmd --opt6
+        ;;
+	$option_7)
+		run_cmd --opt7
+        ;;
+	$option_8)
+		run_cmd --opt8
+        ;;
+esac

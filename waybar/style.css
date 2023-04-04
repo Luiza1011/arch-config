@@ -94,6 +94,7 @@ window#waybar.bottom-bar {background: linear-gradient(to right, rgba(6, 23, 46, 
 #battery{    
     /*border: 1px solid;
     border-color: @light-blue;*/
+    font-size: 14px;
     margin: 3px;
     padding-left: 4px;
     padding-right: 4px;

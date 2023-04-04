@@ -9,7 +9,7 @@
 "margin-left": 230,
 "margin-right": 230,
 
-	"modules-left": ["clock","custom/separator","sway/workspaces",],
+	"modules-left": ["clock","custom/separator","sway/workspaces","battery"],
 	"modules-center": ["custom/media",],
 	"modules-right": ["tray","custom/separator","custom/updater","custom/separator",
 	"custom/notification","custom/separator","pulseaudio","custom/separator","custom/power"],

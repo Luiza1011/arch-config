@@ -1,0 +1,15 @@
+(
+    workspaces: 3,
+    keybindings: {
+        (modifiers: [Super], key: "Return"): Spawn("kitty"),
+        (modifiers: [Ctrl,Shift], key: "q"): Quit,
+        (modifiers: [Super], key: "q"): Close,
+        (modifiers: [Super], key: "1"): Workspace(0),
+        (modifiers: [Super], key: "2"): Workspace(1),
+        (modifiers: [Super], key: "3"): Workspace(2),
+        (modifiers: [Super,Shift], key: "1"): MoveWindowAndSwitchToWorkspace(0),
+        (modifiers: [Super,Shift], key: "2"): MoveWindowAndSwitchToWorkspace(1),
+        (modifiers: [Super,Shift], key: "3"): MoveWindowAndSwitchToWorkspace(2),
+        
+    },
+)
