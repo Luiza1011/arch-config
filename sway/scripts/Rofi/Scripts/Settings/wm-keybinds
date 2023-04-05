@@ -19,10 +19,10 @@ if [[ "$layout" == 'NO' ]]; then
 	option_5="placeholder"
 	option_6="placeholder"
 	else
-	option_1=" Keywords List"
-	option_2=" Media Settings"
-	option_3=" Programs Keybidns"
-	option_4=" Utilities"
+	option_1=" Layout"
+	option_2=" Resize"
+	option_3=" ScratchPad"
+	option_4=" Window control"
 fi
 
 # Rofi CMD

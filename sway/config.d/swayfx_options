@@ -8,7 +8,7 @@ blur_radius 3
 corner_radius 7
 
 shadows on
-shadow_blur_radius 20
+shadow_blur_radius 30
 shadow_color #000000dd
 
-default_dim_inactive 0.1
+default_dim_inactive 0.3

@@ -6,13 +6,12 @@
 "position": "top",
 "spacing": 0,
 "fixed-center": true,
-"margin-left": 230,
-"margin-right": 230,
+"margin-left": 6,
+"margin-right": 6,
 
-	"modules-left": ["clock","custom/separator","sway/workspaces","battery"],
-	"modules-center": ["custom/media",],
-	"modules-right": ["tray","custom/separator","custom/updater","custom/separator",
-	"custom/notification","custom/separator","pulseaudio","custom/separator","custom/power"],
+	"modules-left": ["sway/workspaces","custom/separator","custom/media",],
+	"modules-center": ["custom/launcher", "clock","custom/notification"],
+	"modules-right": ["tray","custom/separator","custom/updater","custom/separator","pulseaudio","custom/separator","battery"],
 
 "include": "~/.config/waybar/Module.json",
 },

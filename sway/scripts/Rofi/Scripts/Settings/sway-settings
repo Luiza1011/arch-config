@@ -19,7 +19,7 @@ if [[ "$layout" == 'NO' ]]; then
 	option_5="placeholder"
 	option_6="placeholder"
 	else
-	option_1=" Keybinds Category              "
+	option_1=" Keybinds Category               "
 	option_2=" Wm-Keybinds Category      "
 	option_3=" Application Rules"
 	option_4=" Autostart Configuration"
