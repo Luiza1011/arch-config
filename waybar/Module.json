@@ -9,7 +9,8 @@
     },
     
 "custom/separator":{
-    "format":"|",},
+    "format":"|",
+  },
 
 "custom/power":{
     "format": " ",
