@@ -3,8 +3,7 @@ include $HOME/.config/sway/config.d/keybinds/keywords
 blur on
 blur_xray on
 blur_passes 2
-blur_radius 3
-
+blur_radius 2
 corner_radius 7
 
 shadows on
