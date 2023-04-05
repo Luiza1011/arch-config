@@ -162,7 +162,7 @@
 "pulseaudio":{
   "format": " {icon} {volume}% ",
   "format-bluetooth": "{volume}% {icon}",
-  "format-muted": " 0%",
+  "format-muted": "婢 0%",
   "format-icons": {
       "headphone": "",
       "hands-free": "",

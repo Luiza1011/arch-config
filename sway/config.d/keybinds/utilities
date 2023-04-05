@@ -3,9 +3,7 @@ include $HOME/.config/sway/config.d/keybinds/keywords
     bindsym $super+Shift+f12 reload
     bindsym $super+q kill
 
-    bindsym $super+m exec killall waybar && waybar
-    bindsym $super+Shift+m exec waybar
-    bindsym $super+$alt+m exec killall waybar
+    bindsym $super+b exec sh ~/.config/sway/scripts/toggles/waybar-toggle
     bindsym $super+f12 exec $powermenu
 
 

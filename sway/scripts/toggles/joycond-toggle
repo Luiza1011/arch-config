@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
-if pgrep -f "joycond" ;
+if pgrep "joycond" ;
     then
-        kitty -e sudo systemctl stop joycond.service && notify-send 'joycond disabled ';
+        kitty -e sudo systemctl stop joycond.service && notify-send 'joycond disabled';
     else 
-        kitty -e sudo systemctl start joycond.service && notify-send 'joycond enabled';
+        kitty -e sudo systemctl start joycond.service && notify-send 'joycond is running';
 fi
