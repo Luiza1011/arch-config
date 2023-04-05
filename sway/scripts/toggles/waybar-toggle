@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+if pgrep -f "waybar" ;
+    then
+        killall waybar;
+    else 
+        waybar;
+fi 

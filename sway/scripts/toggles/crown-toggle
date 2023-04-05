@@ -1,0 +1,6 @@
+if pgrep -f "SCREEN -dmS crown" ;
+    then
+        pkill screen && notify-send 'all screens closed';
+    else 
+        sh ~/crownstart.sh && notify-send 'Crown Bot is running';
+fi 

@@ -26,7 +26,7 @@ exec discord
 
 exec steam -nochatui -nofriendsui -silent
 
-exec nwg-dock -d -w 10 -c ~/.config/sway/scripts/Rofi/Scripts/launcher
+exec nwg-dock -d -w 10 
 
 # Sway Fader
-# exec python3 ~/.config/sway/scripts/swayfader.py      
+# exec python3 ~/.config/sway/scripts/endeavour/swayfader.py      

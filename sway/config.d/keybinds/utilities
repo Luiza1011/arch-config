@@ -3,8 +3,9 @@ include $HOME/.config/sway/config.d/keybinds/keywords
     bindsym $super+Shift+f12 reload
     bindsym $super+q kill
 
-    bindsym $super+m exec waybar
-    bindsym $super+Shift+m exec killall waybar
+    bindsym $super+m exec killall waybar && waybar
+    bindsym $super+Shift+m exec waybar
+    bindsym $super+$alt+m exec killall waybar
     bindsym $super+f12 exec $powermenu
 
 
@@ -12,6 +13,9 @@ include $HOME/.config/sway/config.d/keybinds/keywords
     bindsym $super+d exec $run
     bindsym $alt+Tab exec $windows
     bindsym print exec $screenshot
+#    bindsym print exec grim -g "$(slurp)" - | swappy -f -
+#    bindsym print+$super exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | swappy -f -
+    bindsym print+$alt exec grim
 
 bindsym $super+u exec sh ~/.config/sway/scripts/Rofi/Scripts/Utils
 #

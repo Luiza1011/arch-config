@@ -132,7 +132,7 @@
 
 "clock": {
         //"timezone": "UTC",
-        "format": "{:%I:%M %p}",
+        "format": "  {:%I:%M %p}",
         "on-click": "~/.config/sway/scripts/Rofi/Scripts/launcher",
     },
 

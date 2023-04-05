@@ -26,14 +26,11 @@ set $text vscodium
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -c ~/.config/wofi/config -I
 
-set $powermenu ~/.config/waybar/scripts/power-menu.sh
-
-set $drun       ~/.config/sway/scripts/Rofi/Scripts/launcher
-set $mpd        ~/.config/sway/scripts/Rofi/Scripts/mpd
-set $playerctl  ~/.config/sway/scripts/Rofi/Scripts/playerctl
-set $powermenu  ~/.config/sway/scripts/Rofi/Scripts/powermenu
-set $run        ~/.config/sway/scripts/Rofi/Scripts/runner
-set $windows    ~/.config/sway/scripts/Rofi/Scripts/windows
-set $screenshot ~/.config/sway/scripts/Rofi/Scripts/screenshot
+set $drun       ~/.config/sway/scripts/Rofi/Scripts/archcraft/launcher
+set $mpd        ~/.config/sway/scripts/Rofi/Scripts/archcraft/mpd
+set $playerctl  ~/.config/sway/scripts/Rofi/Scripts/archcraft/playerctl
+set $powermenu  ~/.config/sway/scripts/Rofi/Scripts/archcraft/powermenu
+set $run        ~/.config/sway/scripts/Rofi/Scripts/archcraft/runner
+set $windows    ~/.config/sway/scripts/Rofi/Scripts/archcraft/windows
+set $screenshot ~/.config/sway/scripts/Rofi/Scripts/archcraft/screenshot
