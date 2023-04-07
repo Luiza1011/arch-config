@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway-blur
+Comment=An i3-compatible Wayland compositor
+Exec=/home/luiza/swayfx/build/sway/sway
+Type=Application
+Name[en_US]=swayblur.desktop
