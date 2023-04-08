@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
-sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer swaybg playerctl ffmpeg  rofi waybar nemo font-manager pavucontrol kitty cmus mc steam wine npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr zsh grim slurp wf-recorder --noconfirm
+cd .. 
 
+sudo pacman -S pacman-contrib polkit-gnome base-devel pamixer flatpak swaybg playerctl ffmpeg  rofi waybar nemo font-manager pavucontrol kitty cmus mc steam wine npm nodejs xdg-desktop-portal xdg-desktop-portal-wlr zsh grim slurp wf-recorder swappy --noconfirm
+
+flatpak install flathub org.prismlauncher.PrismLauncher
 
 git clone https://aur.archlinux.org/swayfx-git.git
 cd swayfx-git
@@ -58,16 +61,6 @@ cd joycond-nicman23-git
 makepkg -si --noconfirm
 cd ..
 
-git clone https://aur.archlinux.org/pkgbase/swappy-git
-cd swappy-git 
-makepkg -si --noconfirm
-cd ..
-
-git clone https://aur.archlinux.org/packages/sway-interactive-screenshot
-cd sway-interactive-screenshot
-makepkg -si --noconfirm
-cd ..
-
 rm -rf swayfx-git/
 rm -rf yay-bin/
 rm -rf whatsdesk-bin/
@@ -80,8 +73,6 @@ rm -rf heroic-games-launcher-bin/
 rm -rf pfetch-rs-bin/
 rm -rf discordo-git/
 rm -rf joycond-nicman23/
-rm -rf swappy-git/
-rm -rf sway-interactive-screenshot/
 
 rm -rf ~/.config/kitty/
 cp -r ~/arch-config/symlinks/kitty/ ~/.config/
