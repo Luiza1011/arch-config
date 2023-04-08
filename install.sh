@@ -89,9 +89,6 @@ cp -r ~/arch-config/symlinks/waybar/ ~/.config/
 rm -rf ~/.zshrc
 cp -r ~/arch-config/symlinks/.zshrc ~/
 
-rm -rf ~/.config/fuzzel
-cp -r ~/arch-config/symlinks/fuzzel/ ~/.config/
-
 rm -rf ~/.fonts/
 cp -r ~/arch-config/symlinks/.fonts/ ~/
 
